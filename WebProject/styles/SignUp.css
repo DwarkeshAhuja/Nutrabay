@@ -1,0 +1,114 @@
+
+body{
+        
+        background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.1)),url('https://cdn.nutrabay.com/wp-content/uploads/2021/01/nb-combined-desktop-banner-1600x337.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+
+/*----------------------SECTION 1------------------*/
+
+
+.header1{
+    text-align: center;
+    text-decoration: underline;
+    text-decoration: tan;
+    font-weight: bold;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 3%;
+}
+
+label{
+    padding-left: 20px ;
+    margin: 3px;
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.section1{
+    float: left;
+    width: 430px;
+    height: 550px;
+    margin: 40px;
+    margin-left: 10%;
+    border-radius: 5px;
+    border-style: double;
+    background-color: rgb(172, 168, 145);
+}
+
+.input1{
+    padding: 10px;
+    margin: 2.5px;
+    border-radius: 5px;
+    border-style: inset;
+    width: 40%;
+}
+
+.column1 {
+    padding: 7px;
+    margin-bottom: 7px;
+    width: 40%;
+    padding-left: 7px;
+    height: 1em;
+    margin-left: 10px;
+    border-style: outset;
+    border-radius: 5px;
+    border-bottom-color:  rgb(103, 168, 225);
+}
+
+.col-3{
+    width: 30%;
+}
+
+
+/*----------------------SECTION 2------------------*/
+
+.header2{
+    text-align: center;
+    text-decoration: underline;
+    text-decoration: tan;
+    font-weight: bold;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 3%;
+}
+
+.section2{   
+    float: right;
+    width: 430px;
+    height: 270px;
+    margin: 40px;
+    margin-right: 10%;
+    margin-top: 13%;
+    border-radius: 5px;
+    border-style: double;
+    background-color: rgb(172, 168, 145);
+    background-color: rgb(172, 168, 145);
+}
+
+.header3{
+    text-align: center;
+    text-decoration: underline;
+    text-decoration: tan;
+    font-weight: bold;
+    font-size: 110%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 3%;
+}
+
+
+.input2{
+    padding: 10px;
+    margin: 2.5px;
+    border-radius: 5px;
+    border-style: inset;
+    width: 40%;
+}
+
+.col-4{
+    width: 30%;
+}
+
+

@@ -1,0 +1,411 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Nutrabay.com is one of the best Nutrition product website. We provide best products on reasonable prices and deals. We provide fastest devlivery even one day deliver is also available but you have to have our membership which can make you eligible for lot of attrcative deals and offers.">
+        <meta name="keywords" content=" Proteins, Vitamins, Sport Nutrition, Wellness Products, Weight Loss Products shop on Nutrabey">
+        <meta name="author" content="Dwarkesh Ahuja, Gurleen Kaur, Mandeep Kaur, Virender Singh, Jaspreet Singh">
+        <meta name="title" content="Gold Standard 100% Whey Protein">
+        <title>Optimum Nutrition</title>
+        <link rel="stylesheet" type="text/css" href="styles/styles.css">
+        <link rel="stylesheet" type="text/css" href="styles/section_main.css">
+        <link rel="stylesheet" type="text/css" href="styles/form.css">
+        <link rel="stylesheet" type="text/css" href="styles/product.css">
+        <script src="./controller/prodControl.js"></script>
+    <style> 
+        section h2{font-size: 1.2em;padding: 10px;color: #222b3d !important;}
+        section p{font-size: 1em;padding: 15px 10px;line-height: 2em;color: #222b3d !important;}
+
+        .form_container p, address{color: #444;font-size: 1em;padding: 7px;}
+        .or{font-size: 1em;font-weight: bold;text-align: center;}
+        #main{width:95%;margin: 10px auto;
+            display: grid;
+            grid-template-columns: 50% 40%;
+            justify-content: space-evenly;
+        }
+        .form_container{width: 100%; }
+        
+        #our_images{
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: 30% 30%;
+            justify-content: space-evenly;
+        }
+        #our_images img{width: 100%;border-radius: 50%;}
+        
+        #our_images a:hover{transform: scale(1.2);}
+        #our_images a{font-size: 1em;text-align: center;font-weight: bold;color: #222b3d}
+
+        @media only screen and (max-width: 768px){
+            #main{
+                grid-template-columns: 100%;
+            }
+        }
+        @keyframes images {
+            0% {transform: scale(1);}
+            50%{transform: scale(1.2);}
+            100% {transform: scale(1);}
+        }
+    </style>
+</head>
+<body onload="fetchUrlParamAbout()">
+    <div id="root">
+
+        <header id="top_header" class="clearfix">
+            
+            <div id="top_header_logo">
+				<div id="logo">
+					<a href="./index.html"><img style="border-radius: 7px;" src="./images/logo.png"></a>
+				</div>	
+                <div id="top_header_menubtn"><img id="button" src="https://www.flaticon.com/svg/static/icons/svg/966/966313.svg"></div>
+                <h1><a href="javascript:callHomeIndex();">
+                    <img src="https://cdn.nutrabay.com/wp-content/uploads/2019/05/Nutrabay-full-logo-white-low.png" style="height: 40px;">
+                </a>
+                </h1>
+            </div>
+            <div style="text-align: right;">
+                <a href="#" id="login" style="color: white; text-decoration: none;">LOGIN/REGISTER</a>
+                <a href="#" id="cartvalue" style="color: white; text-decoration: none;">CART/$0</a>
+            </div>
+            <form id="top_header_search" class="clearfix">
+                <input type="search" name="search" id="searchInput" placeholder="Search here..." />
+                <input type="submit" value="" id="searchBtn" />
+            </form>
+        </header>
+  
+        <nav id="top_nav">
+            <ul class="clearfix">
+                <li class="close" id="close">X</li>
+                <li class="dropdown">
+                    <a class="dropbtn">BRANDS</a>
+                    <div class='dropdown_content'>
+                        <ul>
+                            <li><h5 class="dropdown_title">TOP BRANDS</h5></li>
+                            <li><a href="#">Nutrabey</a></li>
+                            <li><a href="#">Optimum Nutrition</a></li>
+                            <li><a href="#">Dymatize</a></li>
+                            <li><a href="#">Ultimate Nutrition</a></li>
+                            <li><a href="#">MuscleTech</a></li>
+                        </ul>
+                        <ul>
+                            <li><h5 class="dropdown_title">BRANDS A-E</h5></li>
+                            <li><a href="#">ABSN</a></li>
+                            <li><a href="#">Absolute Nutrition</a></li>
+                            <li><a href="#">BigMuscles Nutrition</a></li>
+                            <li><a href="#">BSN</a></li>
+                            <li><a href="#">Carbamide Forte</a></li>
+                            <li><a href="#">Dymatize</a></li>
+                            <li><a href="#">Evogen Nutrition</a></li>
+                        </ul>
+                        <ul>
+                            <li><h5 class="dropdown_title">BRANDS F-J</h5></li>
+                            <li><a href="#">Fast & Up</a></li>
+                            <li><a href="#">Fitspire</a></li>
+                            <li><a href="#">GAT</a></li>
+                            <li><a href="#">GNC</a></li>
+                            <li><a href="#">HealthAid</a></li>
+                            <li><a href="#">Insane Labs</a></li>
+                            <li><a href="#">JYM</a></li>
+                        </ul>
+                        <ul>
+                            <li><h5 class="dropdown_title">BRANDS K-O</h5></li>                           
+                            <li><a href="#">Kapiva</a></li>
+                            <li><a href="#">Labrada</a></li>
+                            <li><a href="#">Muscle Asylum</a></li>
+                            <li><a href="#">MuscleTech</a></li>
+                            <li><a href="#">Now Foods</a></li>
+                            <li><a href="#">Nutrabey</a></li>
+                            <li><a href="#">OneLife</a></li>
+                        </ul>
+                        <ul>
+                            <li><h5 class="dropdown_title">BRANDS P-T</h5></li>
+                            <li><a href="#">PhD Nutrition</a></li>
+                            <li><a href="#">Plant Power</a></li>
+                            <li><a href="#">RiteBite</a></li>
+                            <li><a href="#">Ronnie Coleman</a></li>
+                            <li><a href="#">SAN</a></li>
+                            <li><a href="#">Supp Nutrition</a></li>
+                            <li><a href="#">Terror Labs</a></li>
+                        </ul>
+                        <ul>
+                            <li><h5 class="dropdown_title">BRANDS U-Z</h5></li>
+                            <li><a href="#">Ultimate Nutrition</a></li>
+                            <li><a href="#">Universal Nutrition</a></li>
+                            <li><a href="#">USN</a></li>
+                            <li><a href="#">Vahdam Teas</a></li>
+                            <li><a href="#">Vitrovea</a></li>
+                            <li><a href="#">Wellbeing Nutrition</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a class="dropbtn">SPORTS NUTRITION</a>
+                    <div class='dropdown_content'>
+                        <ul>
+                            <li><h5 class="dropdown_title">WHEY PROTEINS</h5></li>
+                            <li><a href="#">Whey Isolate</a></li>
+                            <li><a href="#">Whey Concentrate</a></li>
+                            <li><a href="#">Whey Hydrolyzed</a></li>
+                            <li><a href="#">Whey Blends</a></li>
+                            <li><a href="#">Grass Fed Whey</a></li>
+                            <li><a href="#">Raw Whey</a></li>
+                        </ul>
+                        <ul>
+                            <li><h5 class="dropdown_title">OTHER PROTEINS</h5></li>
+                            <li><a href="#">Protein Blend</a></li>
+                            <li><a href="#">Casein Protein</a></li>
+                            <li><a href="#">Plant Based Natural & Vegan</a></li>
+                            <li><a href="#">Protein Bars</a></li>
+                        </ul>
+                        <ul>
+                            <li><h5 class="dropdown_title">GAINERS</h5></li>
+                            <li><a href="#">Lean Gainer</a></li>
+                            <li><a href="#">Mass Gainer</a></li>
+                            <li><a href="#">Complex Carb</a></li>
+                        </ul>
+                        <ul>
+                            <li><h5 class="dropdown_title">ESSENTIALS</h5></li>
+                            <li><a href="#">Aminos & BCAA</a></li>
+                            <li><a href="#">Pre Workout</a></li>
+                            <li><a href="#">Intra Workout</a></li>
+                            <li><a href="#">Creatine</a></li>
+                            <li><a href="#">Glutamine</a></li>
+                            <li><a href="#">Nitric Oxide</a></li>
+                        </ul>
+                        <ul>
+                            <li><h5 class="dropdown_title">MORE</h5></li>
+                            <li><a href="#">Multivitamins</a></li>
+                            <li><a href="#">Liver Care</a></li>
+                            <li><a href="#">Fish Oil</a></li>
+                            <li><a href="#">Fiber</a></li>
+                            <li><a href="#">Shakers</a></li>
+                            <li><a href="#">Gym Gloves</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">WEIGHT LOSS</a>
+                    <div class='dropdown_content'>
+                        <ul>
+                            <li><h5 class="dropdown_title">METABOLIC CARE</h5></li>
+                            <li><a href="#">Slimming Support</a></li>
+                            <li><a href="#">Fat Burners</a></li>
+                            <li><a href="#">Apple Cider Vinegar</a></li>
+                            <li><a href="#">L Carnitine</a></li>
+                        </ul>
+                        <ul>
+                            <li><h5 class="dropdown_title">WEIGHT LOSS HERBS</h5></li>
+                            <li><a href="#">Teas</a></li>
+                            <li><a href="#">Coffee & Espresso</a></li>
+                            <li><a href="#">Green Coffee Bean</a></li>
+                            <li><a href="#">Ginseng</a></li>
+                            <li><a href="#">CLA</a></li>
+                            <li><a href="#">Garcinia</a></li>
+                        </ul>
+                        <ul>
+                            <li><h5 class="dropdown_title">OTHERS</h5></li>
+                            <li><a href="#">Meal Replacements</a></li>
+                            <li><a href="#">Ketogenic</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">WELLNESS</a>
+                    <div class='dropdown_content'>
+                        <ul>
+                            <li><h5 class="dropdown_title">BONE/JOINT CARE</h5></li>
+                            <li><a href="#">Glucosamine/MSM</a></li>
+                            <li><a href="#">Omega Fats</a></li>
+                            <li><a href="#">Vitamins</a></li>
+                        </ul>
+                        <ul>
+                            <li><h5 class="dropdown_title">IMMUNITY</h5></li>
+                            <li><a href="#">Allergy Care</a></li>
+                            <li><a href="#">Omega Fats</a></li>
+                            <li><a href="#">Vitamins</a></li>
+                            <li><a href="#">Greens</a></li>
+                            <li><a href="#">Teas</a></li>
+                            <li><a href="#">Raw Whey</a></li>
+                        </ul>
+                        <ul>
+                            <li><h5 class="dropdown_title">DIABETES CARE</h5></li>
+                            <li><a href="#">Chromium</a></li>
+                            <li><a href="#">Cod Liver Oil</a></li>
+                            <li><a href="#">Alpha Lipoic Acid</a></li>
+                        </ul>
+                        <ul>
+                            <li><h5 class="dropdown_title">HEART CARE</h5></li>
+                            <li><a href="#">Flaxseed Oil</a></li>
+                            <li><a href="#">CoQ10</a></li>
+                            <li><a href="#">L-Arginine</a></li>
+                            <li><a href="#">Vitamin D</a></li>
+                            <li><a href="#">Cholesterol Management</a></li>
+                        </ul>
+                        <ul>
+                            <li><h5 class="dropdown_title">DIGESTIVE CARE</h5></li>
+                            <li><a href="#">Apple Cider Vinegar</a></li>
+                            <li><a href="#">Probiotic</a></li>
+                            <li><a href="#">Digestive Enzyme</a></li>
+                            <li><a href="#">Acidophillus</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">PROTEINS</a>
+                    <div class='dropdown_content'>
+                        <ul>
+                            <li><h5 class="dropdown_title">WHEY PROTEINS</h5></li>
+                            <li><a href="#">Whey Isolate</a></li>
+                            <li><a href="#">Whey Concentrate</a></li>
+                            <li><a href="#">Whey Hydrolyzed</a></li>
+                            <li><a href="#">Whey Blends</a></li>
+                            <li><a href="#">Grass Fed Whey</a></li>
+                            <li><a href="#">Raw Whey</a></li>
+                        </ul>
+                        <ul>
+                            <li><h5 class="dropdown_title">OTHER PROTEINS</h5></li>
+                            <li><a href="#">Protein Blend</a></li>
+                            <li><a href="#">Casein Protein</a></li>
+                            <li><a href="#">Plant Based Natural & Vegan</a></li>
+                            <li><a href="#">Protein Bars</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">VITAMINS</a>
+                    <div class='dropdown_content'>
+                        <ul>
+                            <li><h5 class="dropdown_title">GENERAL VITAMINS</h5></li>
+                            <li><a href="#">Multivitamins</a></li>
+                            <li><a href="#">Minerals</a></li>
+                            <li><a href="#">Omega Fats</a></li>
+                            <li><a href="#">Antioxidants</a></li>
+                            <li><a href="#">SuperFoods/Greens</a></li>
+                        </ul>
+                        <ul>
+                            <li><h5 class="dropdown_title">BY GENDER OR AGE</h5></li>
+                            <li><a href="#">Elderly</a></li>
+                            <li><a href="#">Women</a></li>
+                            <li><a href="#">Men</a></li>
+                            <li><a href="#">Kids</a></li>
+                        </ul>
+                        <ul>
+                            <li><h5 class="dropdown_title">SPECIALITY VITAMINS</h5></li>
+                            <li><a href="#">Beauty</a></li>
+                            <li><a href="#">Bone & Joints</a></li>
+                            <li><a href="#">Energy</a></li>
+                            <li><a href="#">Sexual Health</a></li>
+                        </ul>
+                        <ul>
+                            <li><h5 class="dropdown_title">SINGLE VITAMINS</h5></li>
+                            <li><a href="#">Vitamin A</a></li>
+                            <li><a href="#">Vitamin B</a></li>
+                            <li><a href="#">Vitamin C</a></li>
+                            <li><a href="#">Vitamin D</a></li>
+                            <li><a href="#">Vitamin E</a></li>
+                            <li><a href="#">Vitamin K</a></li>
+                        </ul>
+                    </div>
+                </li> 
+
+                <li>
+                    <a href="#">CRAZY DEALS</a>
+                </li>
+
+                <li>
+                    <a href="#">TOP 10</a>
+                </li>
+            </ul>
+        </nav>
+        <main id="main" class="clearfix">
+            		
+            <section class="form_container">
+                    <h2>About US</h2>
+                    <p>
+                        <b>Nutrabay</b> is family that loves to be fit and healthy, but when it comes to
+                        supplements to support it, we found it hard to find a good and authentic place,
+                        with the right products and at the right price! We are delivring nutrition products
+                        with 100% authenticity. All of the products are delivered at your doorsteps without 
+                        the involment of third party seller, middlemen, fulfills and ships the requirement of 
+                        the customer directly.
+                    </p>
+                    <p>
+                        We offer a range of supplements and nutrition products at reasonable prices, thus, not only 
+                        make you want to buy the item but also to stay tuned and regularly visit our site for unbelievable offers.
+                        All of your required products are delivered within a short duration of time, saving your valuable time to 
+                        visit the market and searching the best fit offers for you.                      
+                    </p>
+                    <p>
+                        Our organisation is certified by all the brands for authentic products and is able to offer comfortable price 
+                        points at the same time. Our organisation is a family of five (Dwarkesh, Gurleen, Virender, Mandeep and Jaspreet) 
+                        who are passionate about their work and offering and promoting products that everyone wants at lower prices and 
+                        providing best customer service. We thrive to do our best in this cut-throat competitive world of market. We will 
+                        contribute our hard efforts to deliver you innovate andexciting products that help you become a better version of yourself.
+                    </p>
+                
+            </section>
+
+            <section class="form_container">
+                <h2>We are the organisation of five</h2><br>
+                <figure id="our_images" class="clearfix">
+                    <a  class="one" href="#"><img  alt="Dwarkesh Ahuja" src="data:image/jpeg;base64,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"><br>Dwarkesh</a>
+                    <a class="two"  href="#"><img alt="Gurleen Kaur" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjY7HEohG_r_-Qivt1wmG3CW6Wj1SIxRLFDQ&usqp=CAU"><br>Gurleen</a>
+                    <a class="four" href="#"><img alt="Mandeep Kaur" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh4ql5bP2xIx21WOG7lU9K9tvK1qNQGQ7a5g&usqp=CAU"><br>Mandeep</a>
+                    <a class="three" href="#"><img alt="Virender Singh" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr5bgb29IOEpi-pMaBgd1G-Q4bcfMNvxaMQA&usqp=CAU"><br>Virender</a>
+                    <a class="three" href="#"><img alt="Jaspreet Singh" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpPVA6UgV4KAuueye2iJV_G2Zx1It7T6ImKA&usqp=CAU"><br>Jaspreet</a>
+                </figure>
+            </section>
+        </main>
+        <footer id="footer">
+            <div class="title">
+            </div>
+            <div id="footer_nav" class="clearfix">
+                <a href="javascript:aboutUs();">About Us</a>
+                <a href="ContactUs.html">Contact Us</a>
+                <a href="terms.html">Our Policy</a>
+                <a href="ContactUs.html">Help</a>
+            </div>
+            <div class="title">
+            </div>
+            <div id="footer_social" class="clearfix">
+                <a href="https://www.facebook.com/" target="_blank"><img alt="Facebook" src="https://www.flaticon.com/svg/static/icons/svg/145/145802.svg"><br>Facebook</a>
+                <a href="https://twitter.com/" target="_blank"><img alt="Twitter"  src="https://www.flaticon.com/svg/static/icons/svg/145/145812.svg"><br>Twitter</a>
+                <a href="https://www.instagram.com/" target="_blank"><img alt="Instagram"  src="https://www.flaticon.com/svg/static/icons/svg/2111/2111463.svg"><br>Instagram</a>
+                <a href="https://www.youtube.com/" target="_blank"><img alt="Youtube" src="https://www.flaticon.com/svg/static/icons/svg/1384/1384060.svg"><br>Youtube</a>
+            </div>
+
+            <div class="title" id="copyright">
+                <p>&copy;2021 Nutrabey.com</p>
+            </div>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            topNav = document.querySelector("#top_nav");
+            document.querySelector("#top_header_menubtn>#button").addEventListener("click", function(){
+                topNav.style.width = "100%";
+                topNav.style.paddingLeft = "30px";
+                topNav.style.paddingRight = "30px";
+            });
+            document.getElementById("close").addEventListener("click", function(){          
+                topNav.style.width = "0%";
+                topNav.style.padding = "0px";
+            }); 
+
+            items = document.getElementsByClassName("item");
+            for(i=0;i<items.length;i++){
+                items[i].addEventListener('click', function(e){
+                    e.preventDefault();
+                    window.location.href ="product_details.html";
+                });
+            }
+        });
+    </script>
+
+</html>

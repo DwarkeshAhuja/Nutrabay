@@ -1,0 +1,89 @@
+.logo{
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 2%;
+}
+
+.para1{
+    font-size: 130%;
+    margin-left: 10%;
+}
+
+#para2{
+    margin-left: 10%;
+    margin-right: 20%;
+    font-size: 130%;
+    background-color: thistle;
+}
+
+.pre1{
+    font-size: 140%;
+    margin-left: 10%;
+    font-weight: bold;
+}
+
+.hr1{
+    margin-left: 10%;
+    margin-right: 17%;
+    font-weight: bold;
+}
+
+.section1{
+    float: left;
+    margin-left: 10%;
+    width: 50%;
+    height: 250px;
+    border-radius: 5px;
+    border-style: double;
+    background-color: rgb(230, 229, 224);
+}
+
+#button1{
+    margin-left: 10%;
+    width: 35%;
+    font-size: 100%;
+    font-weight: bolder;
+    text-align: center;
+    border-radius: 5%;
+    border-color:  #F49F00;
+    border-collapse: collapse;
+}
+
+
+
+
+.section2{
+    float: right;
+    width: 30%;
+    height: 120%;
+    margin-right: 5%;
+    border-radius: 5px;
+    border-style: double;
+    background-color: rgb(230, 229, 224);
+}
+
+.hr2{
+    margin-left: 2%;
+    margin-right: 2%;
+    font-weight: bold;
+}
+
+.pre2{
+    font-size: 130%;
+}
+
+#button2{
+    margin-left: 23%;
+    width: 55%;
+    font-size: 100%;
+    font-weight: bolder;
+    text-align: center;
+    border-radius: 4%;
+    background-color: #900000;
+}
+
+#sec1{
+    margin-top: 5%;
+    margin-right: auto;
+    margin-left: 41%;
+}

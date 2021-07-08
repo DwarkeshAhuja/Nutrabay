@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/SignUp.css">
+    <title>SignUp</title>
+    <script>
+        var err = 0;
+        var uName;
+	    var parameters = location.search.substring(1).split("&");
+  	    var param1 = parameters[0].split("=");
+  	    param1 = parseFloat(unescape(param1[1]));
+  	    var param2 = parameters[1].split("=");
+	    param2 = parseInt(unescape(param2[1]));
+	    var param3 = parameters[2].split("=");
+	    param3 = unescape(param3[1]);
+	    uName = param3;  
+	    function navigateToPage(){
+            err = 0;
+	    	//navigating to the next page with URL parameters
+             var Fname = document.getElementById("Fname").value;
+             if(Fname == "" || Fname == undefined){
+                 err +=1;
+                 alert("PLease enter the correct first name ");
+             }else{
+                param3 = Fname;
+             }
+
+             var Lname = document.getElementById("Lname").value;
+             if(Lname == "" || Lname == undefined){
+                 err +=1;
+                 alert("PLease enter the correct last name ");
+             }else{
+
+             }
+
+             var email = document.getElementById("email").value;
+             if(email == "" || email == undefined){
+                 err +=1;
+                 alert("PLease enter the correct Email-ID ");
+             }else{
+
+             }
+
+             var reenter_email = document.getElementById("reenter_email").value;
+             if(reenter_email == "" || reenter_email == undefined){
+                 err +=1;
+                 alert("PLease Re-enter the correct Email-ID ");
+             }else{
+                if(reenter_email === email){
+
+                }else{
+                    alert("PLease Enter same Email-ID");
+                }
+             }
+
+             var Phone = document.getElementById("Phone").value;
+             if(Phone == "" || Phone == undefined){
+                 err +=1;
+                 alert("PLease enter the correct phone number");
+             }else{
+                
+             }
+
+             var Confirm_Password = document.getElementById("Confirm_Password").value;
+             if(Confirm_Password == "" || Confirm_Password == undefined){
+                 err +=1;
+                 alert("PLease enter the password");
+             }else{
+                
+             }
+
+             var Confirm_Password1 = document.getElementById("Confirm_Password1").value;
+             if(Confirm_Password1 == "" || Confirm_Password1 == undefined){
+                 err +=1;
+                 alert("PLease Re-enter the correct Password");
+             }else{
+                if(Confirm_Password1 === Confirm_Password){
+
+                }else{
+                    alert("PLease Enter same password");
+                }
+             }
+
+             
+
+            if(err == 0){
+                var url = "index.html?param1="+param1+"&param2="+param2+"&param3="+param3;
+                window.location.href = url;
+            }
+	};
+    </script>
+</head>
+
+<body>
+    <section class="section1">
+        <header class="header1">Fill the details to Register</header>
+            <form autocomplete="off" method="POST" action="#">
+                <div>
+                    <label class="col-3"  for="Fname"> First Name:</label>
+                    <input class="input1" type="text" id="Fname" name="Fname" class="column1" placeholder="Enter First Name" required>
+                </div>
+        
+                <div>
+                    <label class="col-3"  for="Lname"> Last Name:</label>
+                    <input class="input1" type="text" id="Lname" name="Lname" class="column1" placeholder="Enter Last Name" required>
+                </div>
+        
+                <div>
+                    <label class="col-3" for="email">Enter E-mail:</label>
+                    <input class="input1" type="email" id="email" name="email" class="column1" placeholder="Enter E-mail Address" required>
+                </div>
+        
+                <div>
+                    <label class="col-3" for="reenter email">Confirm E-mail:</label>
+                    <input class="input1" type="email" id="reenter_email" name="reenter email" class="column1" placeholder="Confirm E-mail" required>
+                </div>
+        
+                <div>
+                    <label class="col-3" for="Phone">Phone Number:</label>
+                    <input class="input1" type="tel" id="Phone" name="Phone" class="column1" size="12" placeholder=" Enter Phone Number" required>
+                </div>
+
+                <div>
+                    <label class="col-3"  for="Confirm Password">Password:</label>
+                    <input class="input1" type="password" id="Confirm_Password" name="Confirm Password" class="column1" placeholder="Enter the Password" required>
+                </div>
+        
+                <div>
+                    <label class="col-3"  for="Confirm Password">Confirm Password:</label>
+                    <input class="input1" type="password" id="Confirm_Password1" name="Confirm Password" class="column1" placeholder="Confirm the Password" required>
+                </div>
+        
+                <div>
+                    <label class="col-3" for="DOB">Date Of Birth:</label>
+                    <input class="input1" type="date" id="DOB" name="DOB" class="column1" placeholder="Enter Date Of Birth" required>
+                </div>
+        
+                <div>
+                    <label for="Gender">Gender:</label>           
+                    <label for="Gender">M</label>
+                    <input type="radio" id="Gender" name="Gender">
+                    <label for="Gender">F</label>
+                    <input type="radio" id="Gender" name="Gender">
+                    <label for="Gender">Other</label>
+                    <input type="radio" id="Gender" name="Gender"><br>
+                </div><br>
+
+                <div style="padding-left: 20px;">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <a href="#" style="font-size: 110%; font-weight:500; color: black;"> Agree Terms and Conditions</a> 
+                </div><br>
+        
+                <button style="font-size: 100%; text-align: center; margin-left: 7%; height:5%; width:80%; font-weight: bolder; background-color:rgb(230, 151, 109); " 
+                class="column1" onclick ="javascript:navigateToPage();"  type="button" > Sign Up </button>
+
+
+            </form>
+    </section>
+
+    <section class="section2">
+        <header class="header2">Log in</header>
+            <form class="form2" autocomplete="off" method="POST" action="#">
+
+                <div>
+                    <label class="col-4" for="email">Enter E-mail:</label>
+                    <input class="input2" type="email" id="email" name="email" class="column1" placeholder="Enter E-mail Address " required>
+                </div>
+                
+                <div>
+                    <label class="col-4"  for="Confirm Password">Password:</label>
+                    <input class="input2" type="password" id="Confirm Password" name="Confirm Password" class="column1" placeholder="Enter the Password" required>
+                </div>
+
+                <header class="header3">Or</header>
+
+                <div>
+                    <button style="margin-left: 28%; border-style: groove; width: 190px;" action="#">
+                    <label style="margin-left: 1%; font-weight: normal; color: rgb(73, 73, 233);" for="Log in with Google">Log in with Google</label>
+                    </button > 
+                </div>
+
+                <button style="font-size: 100%; text-align: center; margin-left: 10%; margin-top: 6px; height:5%; width:80%; font-weight: bolder; background-color:rgb(230, 151, 109); " 
+                class="column1" onclick ="alert('You have Logged in your account!!');"  type="submit" > Log in </button>
+
+            </form>
+    </section>
+
+</body>
+
+</html>

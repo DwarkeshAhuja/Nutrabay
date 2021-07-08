@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrabay - Protien and nutrition at your door step </title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/section_main.css">
+    <script src="./controller/controller.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <style>
+    </style>
+</head>
+
+<body onload="infiniteLoop()">
+    <div id="root">
+
+        <header id="top_header" class="clearfix">
+
+            <div id="top_header_logo">
+                <div id="top_header_menubtn"><img id="button"
+                        src="https://www.flaticon.com/svg/static/icons/svg/966/966313.svg" alt="search"></div>
+                <h1><a href="javascript:callHomeIndex();">
+                        <img src="https://cdn.nutrabay.com/wp-content/uploads/2019/05/Nutrabay-full-logo-white-low.png"
+                            style="height: 40px;">
+                    </a>
+                </h1>
+            </div>
+            <div style="text-align: right;">
+                <a href="#" id="login" style="color: white; text-decoration: none;">LOGIN/REGISTER</a>
+                <a href="#" id="cartvalue" style="color: white; text-decoration: none;">CART/$0</a>
+            </div>
+            <form id="top_header_search" class="clearfix">
+                <input type="search" name="search" id="searchInput" placeholder="Search here..." />
+                <input type="submit" value="" id="searchBtn" />
+            </form>
+        </header>
+
+        <nav id="top_nav">
+            <ul class="clearfix">
+                <li class="close" id="close">X</li>
+                <li class="dropdown">
+                    <a class="dropbtn">BRANDS</a>
+                    <div class='dropdown_content'>
+                        <ul>
+                            <li>
+                                <h5 class="dropdown_title">TOP BRANDS</h5>
+                            </li>
+                            <li><a href="#">Nutrabey</a></li>
+                            <li><a href="#">Optimum Nutrition</a></li>
+                            <li><a href="#">Dymatize</a></li>
+                            <li><a href="#">Ultimate Nutrition</a></li>
+                            <li><a href="#">MuscleTech</a></li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <h5 class="dropdown_title">BRANDS A-E</h5>
+                            </li>
+                            <li><a href="#">ABSN</a></li>
+                            <li><a href="#">Absolute Nutrition</a></li>
+                            <li><a href="#">BigMuscles Nutrition</a></li>
+                            <li><a href="#">BSN</a></li>
+                            <li><a href="#">Carbamide Forte</a></li>
+                            <li><a href="#">Dymatize</a></li>
+                            <li><a href="#">Evogen Nutrition</a></li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <h5 class="dropdown_title">BRANDS F-J</h5>
+                            </li>
+                            <li><a href="#">Fast & Up</a></li>
+                            <li><a href="#">Fitspire</a></li>
+                            <li><a href="#">GAT</a></li>
+                            <li><a href="#">GNC</a></li>
+                            <li><a href="#">HealthAid</a></li>
+                            <li><a href="#">Insane Labs</a></li>
+                            <li><a href="#">JYM</a></li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <h5 class="dropdown_title">BRANDS K-O</h5>
+                            </li>
+                            <li><a href="#">Kapiva</a></li>
+                            <li><a href="#">Labrada</a></li>
+                            <li><a href="#">Muscle Asylum</a></li>
+                            <li><a href="#">MuscleTech</a></li>
+                            <li><a href="#">Now Foods</a></li>
+                            <li><a href="#">Nutrabey</a></li>
+                            <li><a href="#">OneLife</a></li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <h5 class="dropdown_title">BRANDS P-T</h5>
+                            </li>
+                            <li><a href="#">PhD Nutrition</a></li>
+                            <li><a href="#">Plant Power</a></li>
+                            <li><a href="#">RiteBite</a></li>
+                            <li><a href="#">Ronnie Coleman</a></li>
+                            <li><a href="#">SAN</a></li>
+                            <li><a href="#">Supp Nutrition</a></li>
+                            <li><a href="#">Terror Labs</a></li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <h5 class="dropdown_title">BRANDS U-Z</h5>
+                            </li>
+                            <li><a href="#">Ultimate Nutrition</a></li>
+                            <li><a href="#">Universal Nutrition</a></li>
+                            <li><a href="#">USN</a></li>
+                            <li><a href="#">Vahdam Teas</a></li>
+                            <li><a href="#">Vitrovea</a></li>
+                            <li><a href="#">Wellbeing Nutrition</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a class="dropbtn">SPORTS NUTRITION</a>
+                    <div class='dropdown_content'>
+                        <ul>
+                            <li>
+                                <h5 class="dropdown_title">WHEY PROTEINS</h5>
+                            </li>
+                            <li><a href="#">Whey Isolate</a></li>
+                            <li><a href="#">Whey Concentrate</a></li>
+                            <li><a href="#">Whey Hydrolyzed</a></li>
+                            <li><a href="#">Whey Blends</a></li>
+                            <li><a href="#">Grass Fed Whey</a></li>
+                            <li><a href="#">Raw Whey</a></li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <h5 class="dropdown_title">OTHER PROTEINS</h5>
+                            </li>
+                            <li><a href="#">Protein Blend</a></li>
+                            <li><a href="#">Casein Protein</a></li>
+                            <li><a href="#">Plant Based Natural & Vegan</a></li>
+                            <li><a href="#">Protein Bars</a></li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <h5 class="dropdown_title">GAINERS</h5>
+                            </li>
+                            <li><a href="#">Lean Gainer</a></li>
+                            <li><a href="#">Mass Gainer</a></li>
+                            <li><a href="#">Complex Carb</a></li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <h5 class="dropdown_title">ESSENTIALS</h5>
+                            </li>
+                            <li><a href="#">Aminos & BCAA</a></li>
+                            <li><a href="#">Pre Workout</a></li>
+                            <li><a href="#">Intra Workout</a></li>
+                            <li><a href="#">Creatine</a></li>
+                            <li><a href="#">Glutamine</a></li>
+                            <li><a href="#">Nitric Oxide</a></li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <h5 class="dropdown_title">MORE</h5>
+                            </li>
+                            <li><a href="#">Multivitamins</a></li>
+                            <li><a href="#">Liver Care</a></li>
+                            <li><a href="#">Fish Oil</a></li>
+                            <li><a href="#">Fiber</a></li>
+                            <li><a href="#">Shakers</a></li>
+                            <li><a href="#">Gym Gloves</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">WEIGHT LOSS</a>
+                    <div class='dropdown_content'>
+                        <ul>
+                            <li>
+                                <h5 class="dropdown_title">METABOLIC CARE</h5>
+                            </li>
+                            <li><a href="#">Slimming Support</a></li>
+                            <li><a href="#">Fat Burners</a></li>
+                            <li><a href="#">Apple Cider Vinegar</a></li>
+                            <li><a href="#">L Carnitine</a></li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <h5 class="dropdown_title">WEIGHT LOSS HERBS</h5>
+                            </li>
+                            <li><a href="#">Teas</a></li>
+                            <li><a href="#">Coffee & Espresso</a></li>
+                            <li><a href="#">Green Coffee Bean</a></li>
+                            <li><a href="#">Ginseng</a></li>
+                            <li><a href="#">CLA</a></li>
+                            <li><a href="#">Garcinia</a></li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <h5 class="dropdown_title">OTHERS</h5>
+                            </li>
+                            <li><a href="#">Meal Replacements</a></li>
+                            <li><a href="#">Ketogenic</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">WELLNESS</a>
+                    <div class='dropdown_content'>
+                        <ul>
+                            <li>
+                                <h5 class="dropdown_title">BONE/JOINT CARE</h5>
+                            </li>
+                            <li><a href="#">Glucosamine/MSM</a></li>
+                            <li><a href="#">Omega Fats</a></li>
+                            <li><a href="#">Vitamins</a></li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <h5 class="dropdown_title">IMMUNITY</h5>
+                            </li>
+                            <li><a href="#">Allergy Care</a></li>
+                            <li><a href="#">Omega Fats</a></li>
+                            <li><a href="#">Vitamins</a></li>
+                            <li><a href="#">Greens</a></li>
+                            <li><a href="#">Teas</a></li>
+                            <li><a href="#">Raw Whey</a></li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <h5 class="dropdown_title">DIABETES CARE</h5>
+                            </li>
+                            <li><a href="#">Chromium</a></li>
+                            <li><a href="#">Cod Liver Oil</a></li>
+                            <li><a href="#">Alpha Lipoic Acid</a></li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <h5 class="dropdown_title">HEART CARE</h5>
+                            </li>
+                            <li><a href="#">Flaxseed Oil</a></li>
+                            <li><a href="#">CoQ10</a></li>
+                            <li><a href="#">L-Arginine</a></li>
+                            <li><a href="#">Vitamin D</a></li>
+                            <li><a href="#">Cholesterol Management</a></li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <h5 class="dropdown_title">DIGESTIVE CARE</h5>
+                            </li>
+                            <li><a href="#">Apple Cider Vinegar</a></li>
+                            <li><a href="#">Probiotic</a></li>
+                            <li><a href="#">Digestive Enzyme</a></li>
+                            <li><a href="#">Acidophillus</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">PROTEINS</a>
+                    <div class='dropdown_content'>
+                        <ul>
+                            <li>
+                                <h5 class="dropdown_title">WHEY PROTEINS</h5>
+                            </li>
+                            <li><a href="#">Whey Isolate</a></li>
+                            <li><a href="#">Whey Concentrate</a></li>
+                            <li><a href="#">Whey Hydrolyzed</a></li>
+                            <li><a href="#">Whey Blends</a></li>
+                            <li><a href="#">Grass Fed Whey</a></li>
+                            <li><a href="#">Raw Whey</a></li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <h5 class="dropdown_title">OTHER PROTEINS</h5>
+                            </li>
+                            <li><a href="#">Protein Blend</a></li>
+                            <li><a href="#">Casein Protein</a></li>
+                            <li><a href="#">Plant Based Natural & Vegan</a></li>
+                            <li><a href="#">Protein Bars</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">VITAMINS</a>
+                    <div class='dropdown_content'>
+                        <ul>
+                            <li>
+                                <h5 class="dropdown_title">GENERAL VITAMINS</h5>
+                            </li>
+                            <li><a href="#">Multivitamins</a></li>
+                            <li><a href="#">Minerals</a></li>
+                            <li><a href="#">Omega Fats</a></li>
+                            <li><a href="#">Antioxidants</a></li>
+                            <li><a href="#">SuperFoods/Greens</a></li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <h5 class="dropdown_title">BY GENDER OR AGE</h5>
+                            </li>
+                            <li><a href="#">Elderly</a></li>
+                            <li><a href="#">Women</a></li>
+                            <li><a href="#">Men</a></li>
+                            <li><a href="#">Kids</a></li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <h5 class="dropdown_title">SPECIALITY VITAMINS</h5>
+                            </li>
+                            <li><a href="#">Beauty</a></li>
+                            <li><a href="#">Bone & Joints</a></li>
+                            <li><a href="#">Energy</a></li>
+                            <li><a href="#">Sexual Health</a></li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <h5 class="dropdown_title">SINGLE VITAMINS</h5>
+                            </li>
+                            <li><a href="#">Vitamin A</a></li>
+                            <li><a href="#">Vitamin B</a></li>
+                            <li><a href="#">Vitamin C</a></li>
+                            <li><a href="#">Vitamin D</a></li>
+                            <li><a href="#">Vitamin E</a></li>
+                            <li><a href="#">Vitamin K</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="#">CRAZY DEALS</a>
+                </li>
+
+                <li>
+                    <a href="#">TOP 10</a>
+                </li>
+            </ul>
+        </nav>
+        <main id="main" class="clearfix">
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div id="firstImg" class="fade">
+                    <img src="https://cdn.nutrabay.com/wp-content/uploads/2021/03/CarbamideForte-HomePage-Desktop-Banner-Upto44-1600x337.jpg"
+                        style="width:100%; display: block;">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="https://cdn.nutrabay.com/wp-content/uploads/2021/03/Muscletech-CategoryPage-Desktop-Banner-Upto52-1600x325.jpg"
+                        style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="https://cdn.nutrabay.com/wp-content/uploads/2021/02/ON-HomePage-Desktop-Banner-Upto40-1600x337.jpg"
+                        style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="https://cdn.nutrabay.com/wp-content/uploads/2020/12/OneScience-Homepage-Desktop-Banner-Upto50-1600x337.jpg"
+                        style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="https://cdn.nutrabay.com/wp-content/uploads/2020/10/IN2-HomePage-Desktop-Banner-upto38-1600x337.jpg"
+                        style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="https://cdn.nutrabay.com/wp-content/uploads/2021/01/nb-combined-desktop-banner-1600x337.jpg"
+                        style="width:100%">
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+            <section class="aside_right">
+                <header>
+                    <h2>Best Deals of the week</h2>
+                </header>
+                <div class="items_div clearfix">
+                    <marquee behavior="scroll" overflow="hidden" direction="up" scrollamount="20"
+                        onMouseOver="this.stop()" onMouseOut="this.start()">
+                        <div class="item">
+
+                            <div class="item_image">
+                                <img src="https://cdn.nutrabay.com/wp-content/uploads/2020/08/NB-OPT-1002-29_1-PA-510x510.jpg"
+                                    alt="deals">
+                            </div>
+                            <div class="item_title">Optimum Nutrition</div>
+                            <div class="item_price discount">Min 30% off</div>
+                            <div class="item_desc">Top deals on Proteins and suppliments</div>
+                        </div>
+                        <div class="item">
+                            <div class="item_image">
+                                <img src="https://cdn.nutrabay.com/wp-content/uploads/2021/02/NB-RVL-1001-01-01-510x510.jpg"
+                                    alt="deals">
+                            </div>
+                            <div class="item_title">BCAA</div>
+                            <div class="item_price discount">Min 20% off</div>
+                            <div class="item_desc">Only 4 Left in Stock</div>
+                        </div>
+                        <div class="item">
+                            <div class="item_image">
+                                <img src="https://cdn.nutrabay.com/wp-content/uploads/2020/11/NB-NUT-1031-01-01.jpg"
+                                    alt="deals">
+                            </div>
+                            <div class="item_title">Nutrabay Wellness Fish Oil Omega 3 -1000mg</div>
+                            <div class="item_price discount">Min 15% off</div>
+                            <div class="item_desc">Starting from $40</div>
+                        </div>
+                    </marquee>
+                </div>
+            </section>
+
+            <section class="section">
+                <header><h2>Offers</h2></header>
+                <div class="items_div clearfix">
+
+                    <div class="item">
+                        <div class="item_image">
+                            <img src="https://cdn.nutrabay.com/wp-content/uploads/2020/12/NB-OPT-1020-07-01-247x247.jpg" alt="offer2">
+                        </div>
+                        <div class="item_title">BCAA</div>
+                        <div class="item_price discount">Min 30% off</div>
+                        <div class="item_desc">Only 4 left in stock</div>
+                    </div>
+                    <div class="item">
+                        <div class="item_image">
+                            <img src="https://cdn.nutrabay.com/wp-content/uploads/2020/11/NB-NUT-1031-01-01-247x247.jpg" alt="offer2">
+                        </div>
+                        <div class="item_title">Fish Oil Omega 3</div>
+                        <div class="item_price discount">Min 15% off</div>
+                        <div class="item_desc">Starting from $40</div>
+                    </div>
+                    <div class="item">
+                        <div class="item_image">
+                            <img src="https://cdn.nutrabay.com/wp-content/uploads/2020/08/NB-OPT-1002-29_1-PA-247x247.jpg" alt="offer2">
+                        </div>
+                        <div class="item_title">Optimum Nutrition</div>
+                        <div class="item_price discount">Min 30% off</div>
+                        <div class="item_desc">Top deals on Proteins</div>
+                    </div>
+                    <div class="item">
+                        <div class="item_image">
+                            <img src="https://cdn.nutrabay.com/wp-content/uploads/2021/02/NB-RVL-1001-01-01-510x510.jpg" alt="offer2">
+                        </div>
+                        <div class="item_title">BCAA</div>
+                        <div class="item_price discount">From $22</div>
+                        <div class="item_desc">Top brands Available</div>
+                    </div>
+                    <div class="item">
+                        <div class="item_image">
+                            <img src="https://cdn.nutrabay.com/wp-content/uploads/2018/02/NB-DYM-1003-03-01-247x247.jpg" alt="offer2">
+                        </div>
+                        <div class="item_title">Dymatize Iso 100 Protein</div>
+                        <div class="item_price discount">From $30</div>
+                        <div class="item_desc">Fast Delivery</div>
+                    </div>
+                    <div class="item">
+                        <div class="item_image">
+                            <img src="https://cdn.nutrabay.com/wp-content/uploads/2020/06/NB-BGM-1000-03-01-247x247.jpg" alt="offer2">
+                        </div>
+                        <div class="item_title">Bodyfuel Hardcore</div>
+                        <div class="item_price discount">Min 50% off</div>
+                        <div class="item_desc">Genuine Products</div>
+                    </div>
+                    <div class="item">
+                        <div class="item_image">
+                            <img src="https://cdn.nutrabay.com/wp-content/uploads/2021/01/NB-MMK-1001-02-01-247x247.jpg" alt="offer2">
+                        </div>
+                        <div class="item_title">Whey Isolate Protein</div>
+                        <div class="item_price discount">From $35</div>
+                        <div class="item_desc">Best Brand Proteins</div>
+                    </div>
+
+
+                    <div class="item">
+                        <div class="item_image">
+                            <img src="https://cdn.nutrabay.com/wp-content/uploads/2020/12/NB-OPT-1020-07-01-247x247.jpg" alt="offer2">
+                        </div>
+                        <div class="item_title">BCAA</div>
+                        <div class="item_price discount">Min 30% off</div>
+                        <div class="item_desc">Only 4 left in stock</div>
+                    </div>
+                    <div class="item">
+                        <div class="item_image">
+                            <img src="https://cdn.nutrabay.com/wp-content/uploads/2020/11/NB-NUT-1031-01-01-247x247.jpg" alt="offer2">
+                        </div>
+                        <div class="item_title">Fish Oil Omega 3</div>
+                        <div class="item_price discount">Min 15% off</div>
+                        <div class="item_desc">Starting from $40</div>
+                    </div>
+                    <div class="item">
+                        <div class="item_image">
+                            <img src="https://cdn.nutrabay.com/wp-content/uploads/2020/08/NB-OPT-1002-29_1-PA-247x247.jpg" alt="offer2">
+                        </div>
+                        <div class="item_title">Optimum Nutrition</div>
+                        <div class="item_price discount">Min 30% off</div>
+                        <div class="item_desc">Top deals on Proteins</div>
+                    </div>
+                    <div class="item">
+                        <div class="item_image">
+                            <img src="https://cdn.nutrabay.com/wp-content/uploads/2021/02/NB-RVL-1001-01-01-510x510.jpg" alt="offer2">
+                        </div>
+                        <div class="item_title">BCAA</div>
+                        <div class="item_price discount">From $22</div>
+                        <div class="item_desc">Top brands Available</div>
+                    </div>
+                    <div class="item">
+                        <div class="item_image">
+                            <img src="https://cdn.nutrabay.com/wp-content/uploads/2018/02/NB-DYM-1003-03-01-247x247.jpg" alt="offer2">
+                        </div>
+                        <div class="item_title">Dymatize Iso 100 Protein</div>
+                        <div class="item_price discount">From $30</div>
+                        <div class="item_desc">Fast Delivery</div>
+                    </div>
+                    <div class="item">
+                        <div class="item_image">
+                            <img src="https://cdn.nutrabay.com/wp-content/uploads/2020/06/NB-BGM-1000-03-01-247x247.jpg" alt="offer2">
+                        </div>
+                        <div class="item_title">Bodyfuel Hardcore</div>
+                        <div class="item_price discount">Min 50% off</div>
+                        <div class="item_desc">Genuine Products</div>
+                    </div>
+                    <div class="item">
+                        <div class="item_image">
+                            <img src="https://cdn.nutrabay.com/wp-content/uploads/2021/01/NB-MMK-1001-02-01-247x247.jpg" alt="offer2">
+                        </div>
+                        <div class="item_title">Whey Isolate Protein</div>
+                        <div class="item_price discount">From $35</div>
+                        <div class="item_desc">Best Brand Proteins</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer id="footer">
+            <div class="title">
+            </div>
+            <div id="footer_nav" class="clearfix">
+                <a href="javascript:aboutUs();">About Us</a>
+                <a href="ContactUs.html">Contact Us</a>
+                <a href="terms.html">Our Policy</a>
+                <a href="ContactUs.html">Help</a>
+            </div>
+            <div class="title">
+            </div>
+            <div id="footer_social" class="clearfix">
+                <a href="https://www.facebook.com/" target="_blank"><img alt="Facebook"
+                        src="https://www.flaticon.com/svg/static/icons/svg/145/145802.svg"><br>Facebook</a>
+                <a href="https://twitter.com/" target="_blank"><img alt="Twitter"
+                        src="https://www.flaticon.com/svg/static/icons/svg/145/145812.svg"><br>Twitter</a>
+                <a href="https://www.instagram.com/" target="_blank"><img alt="Instagram"
+                        src="https://www.flaticon.com/svg/static/icons/svg/2111/2111463.svg"><br>Instagram</a>
+                <a href="https://www.youtube.com/" target="_blank"><img alt="Youtube"
+                        src="https://www.flaticon.com/svg/static/icons/svg/1384/1384060.svg"><br>Youtube</a>
+            </div>
+
+            <div class="title" id="copyright">
+                <p>&copy;2021 Nutrabey.com</p>
+            </div>
+        </footer>
+    </div>
+    <script>
+        
+    </script>
+
+</html>

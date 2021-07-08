@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Nutrabay</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+</head>
+<script>
+	var uName;
+	var parameters = location.search.substring(1).split("&");
+  	var param1 = parameters[0].split("=");
+  	param1 = parseFloat(unescape(param1[1]));
+  	var param2 = parameters[1].split("=");
+	param2 = parseInt(unescape(param2[1]));
+	var param3 = parameters[2].split("=");
+	param3 = unescape(param3[1]);
+	uName = param3;  
+	function navigateToPage(){
+		//navigating to the next page with URL parameters 
+		var url = "WebProject/index.html?param1="+param1+"&param2="+param2+"&param3="+uName;
+          window.location.href = url;
+	};
+	function addUrlParam(){
+		if(window.location.href == 'file:///Users/vivinahuja/Desktop/Dwarkesh%20Clg/Semester%202/Web%20Technologies%20II/online%20shop/online%20shop/index.html'){
+			window.location.href += "?param1=0&param2=0&param3=name";
+		}
+	}
+	function signUp(){
+		//navigating to the next page with URL parameters 
+		var url = "WebProject/SignUp.html?param1="+param1+"&param2="+param2+"&param3="+uName;
+          window.location.href = url;
+	};
+</script>
+
+<body onload="addUrlParam()">
+
+	<header>
+
+		<nav>
+			<div class="logo">
+				<h1 class="animated infinite heartBeat"><img
+						src="https://cdn.nutrabay.com/wp-content/uploads/2019/05/Nutrabay-full-logo-white-low.png"
+						style="height: 40px;"></h1>
+			</div>
+			<div class="menu">
+				<a href="./index.html">Home</a>
+				<a href="javascript:navigateToPage();">Protien</a>
+				<a href="#">About</a>
+				<a href="#">Contact</a>
+			</div>
+		</nav>
+		<main>
+			<section>
+				<h3>Welcome to Online Shop</h3>
+				<h1>DO COME & VISIT<span class="change_content"> </span></h1>
+				<p>"Worlds only shop for protien Suppliments"</p>
+				<a href="javascript:navigateToPage();" class="btnone">Buy Now</a>
+				<a href="javascript:signUp()" class="btntwo">SignUp Here</a>
+			</section>
+		</main>
+
+	</header>
+</body>
+
+</html>
